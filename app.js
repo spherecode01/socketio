@@ -39,3 +39,8 @@ io.on("connection", (socket) => {
 });
 
 io.listen("4000");
+
+// Test route
+app.get("/", (req, res) => {
+  res.send("Socket.IO server is running!");
+});

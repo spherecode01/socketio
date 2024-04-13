@@ -1,8 +1,5 @@
 import { Server } from "socket.io";
-import express from "express";
 
-
-const app = express();
 const io = new Server({
   cors: {
     origin: "http://localhost:5173",
@@ -43,7 +40,3 @@ io.on("connection", (socket) => {
 
 io.listen("4000");
 
-// Test route
-app.get("/", (req, res) => {
-  res.send("Socket.IO server is running!");
-});
